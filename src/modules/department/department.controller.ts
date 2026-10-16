@@ -20,6 +20,7 @@ export class DepartmentController {
   }
 
   @Post()
+  // @Post()
   @ApiBearerAuth()
   @UseGuards(JwtAuthGuard)
   create(@Body() dto: CreateDepartmentDto) {
