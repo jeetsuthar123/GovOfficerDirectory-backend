@@ -1,0 +1,2 @@
+import { PartialType } from '@nestjs/swagger';
+import{IsBoolean,IsNumber,IsOptional,IsString}from'class-validator';export class CreateDesignationDto{@IsString()name:string;@IsString()code:string;@IsOptional()@IsNumber()level?:number;@IsOptional()@IsNumber()seniority?:number;@IsOptional()@IsString()description?:string;@IsOptional()@IsBoolean()isActive?:boolean;}export class UpdateDesignationDto extends PartialType(CreateDesignationDto){}
